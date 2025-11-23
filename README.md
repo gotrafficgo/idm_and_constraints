@@ -1,11 +1,17 @@
 # Intelligent Driver Model and its Constrants in Coding
 
 ## Abstract
-I found the additional constraints large influence the results of IDM-based simulation. I report some of them here. Note: The well-known **Intelligent Driver Model (IDM)** proposed by Martin Treiber et al (https://arxiv.org/abs/cond-mat/0002177). 
+I found the additional constraints large influence the results of IDM-based simulation. I report some of them here. 
+
+**Note 1:** The well-known **Intelligent Driver Model (IDM)** proposed by Martin Treiber et al (https://arxiv.org/abs/cond-mat/0002177). 
+**Note 2:** I’m fairly confident that there are no errors in the code. If you found one, please kindly reach out to me (he.zb@hotmail.com), which will be very helpful!
+
+
 
 ## Scenario
 * Straight road (open boundary)
 * Entering the road with fixed time interval
+* Simulation time step = 0.1 second
 * **Bottleneck:** Before the very first vehicle, we set up a virual standstill obstacle (speed = 0), effective before a given time (100 seconds); after the given time, no such limitation, i.e., infinite distance with maximum speed
 * ```python
     def _generate_boundary_for_first_vehicle(self, current_time):
