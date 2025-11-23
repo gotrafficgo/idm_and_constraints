@@ -119,8 +119,9 @@ If you find this work useful, please consider citing the project
 
 ```bibtex
 @misc{ZhengbingHe2025,
-  title={Intelligent Driver Model and its Constrants in Coding},
-  author={He, Zhengbing},
-  journal={https://github.com/gotrafficgo/idm_and_constraints},
-  year={2025}
+  author = {He, Zhengbing},
+  title = {Intelligent Driver Model and its Constraints in Coding},
+  howpublished = {\url{https://github.com/gotrafficgo/idm_and_constraints}},
+  year = {2025},
+  note = {GitHub repository}
 }
