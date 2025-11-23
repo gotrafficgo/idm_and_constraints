@@ -24,7 +24,7 @@ I am particularly surprised that few studies actually report these, even though 
 
 ## Issues (Possible)
 
-**Experiment 1 Original IDM:** No constraints taking effect. We observe:
+**Experiment 1 (Original IDM):** No constraints taking effect. We observe:
 * The stop-and-go wave does not continously propagate upstream
 * After escaping the stop-and-go wave, the vehicle’s speed cannot return to high speed
 
