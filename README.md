@@ -12,7 +12,7 @@ I found the additional constraints large influence the results of IDM-based simu
         ...   
   ```
 
-## (Possible) Issues
+## Issues (Possible)
 
 **Experiment 1:** Original IDM: No constraints taking effect. We observe:
 * The stop-and-go wave does not propagate upstream
