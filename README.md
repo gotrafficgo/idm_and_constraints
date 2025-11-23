@@ -13,13 +13,13 @@ I am particularly surprised that few studies actually report these, even though 
 * Straight road (open boundary)
 * Entering the road with fixed time interval
 * Simulation time step = 0.1 second
+* IDM parameters:
+  minimum_spacing = 2; safety_time_headway = 1.2; maximum acceleration = 2 desired_deceleration = 1.2
 * **Bottleneck:** Before the very first vehicle, we set up a virual standstill obstacle (speed = 0), taking effect only before a given time (100 seconds); after the given time, no such limitation
 * ```python
     def _generate_boundary_for_first_vehicle(self, current_time):
         ...   
   ```
-* IDM parameters
-  minimum_spacing = 2; safety_time_headway = 1.2; maximum acceleration = 2 desired_deceleration = 1.2
 
 
 ## Issues (Possible)
