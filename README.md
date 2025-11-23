@@ -40,7 +40,7 @@ I am particularly surprised that few studies actually report these, even though 
 
 
 
-**Experiment 3:** Original IDM: Only Constraint 2 not taking effect. We observe:
+**Experiment 3:** Only Constraint 2 not taking effect. We observe:
 * Collision occurs
 
 <img src="Figure_3.png" alt="Diagram" width="600">
