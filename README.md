@@ -118,7 +118,7 @@ if self.with_additional_constraint_5 is True:
 If you find this work useful, please consider citing the project
 
 ```bibtex
-@article{ZhengbingHe2025,
+@misc{ZhengbingHe2025,
   title={Intelligent Driver Model and its Constrants in Coding},
   author={He, Zhengbing},
   journal={https://github.com/gotrafficgo/idm_and_constraints},
