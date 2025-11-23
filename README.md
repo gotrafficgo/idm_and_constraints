@@ -1,11 +1,12 @@
 # Intelligent Driver Model and its Constrants in Coding
 
 ## Abstract
-I found the additional constraints largely influence the results of IDM-based traffic flow simulation. I report some of them here. 
+I found the additional constraints largely influence the results of IDM-based traffic flow simulation. I report some of them here. I don’t think directly implementing the model with arbitrary constraints in coding is a rigorous approach.
 
 **Note 1:** The well-known Intelligent Driver Model (IDM) proposed by Martin Treiber et al (https://arxiv.org/abs/cond-mat/0002177). 
 **Note 2:** I’m fairly confident that there are no errors in the code. If you found one, please kindly reach out to me (he.zb@hotmail.com), which will be very helpful!
 I am particularly surprised that few studies actually report these, even though the IDM is now widely used in academia ([a review](https://arxiv.org/abs/2506.05909)) and industry (e.g., SUMO).
+**Note 3:** I don't think 
 
 
 ## Scenario
