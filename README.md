@@ -6,8 +6,9 @@ I found the additional constraints largely influence the results of IDM-based tr
 Note 1: The well-known Intelligent Driver Model (IDM) proposed by ([Martin Treiber et al](https://arxiv.org/abs/cond-mat/0002177)). 
 
 Note 2: I’m fairly confident that there are no errors in the code. 
-If you found errors or someone has improved the original IDM with a simple adjustment, please kindly reach out to me (he.zb@hotmail.com), which will be very helpful!
+If you found errors or knew someone has improved the model, please kindly reach out to me (he.zb@hotmail.com), which will be very helpful!
 I am particularly surprised that few studies actually report these, even though the IDM is now widely used in academia ([a review](https://arxiv.org/abs/2506.05909)) and industry (e.g., SUMO).
+Prove me wrong, please.
 
 
 
