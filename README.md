@@ -18,7 +18,8 @@ I am particularly surprised that few studies actually report these, even though 
     def _generate_boundary_for_first_vehicle(self, current_time):
         ...   
   ```
-
+* IDM parameters
+  minimum_spacing = 2; safety_time_headway = 1.2; maximum acceleration = 2 desired_deceleration = 1.2
 
 
 ## Issues (Possible)
