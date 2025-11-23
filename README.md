@@ -18,7 +18,7 @@ I found the additional constraints large influence the results of IDM-based simu
 * The stop-and-go wave does not propagate upstream
 * After escaping the stop-and-go wave, the vehicle’s speed cannot return to high speed
 
-<img src="Figure_1.png" alt="Diagram" width="500">
+<img src="Figure_1.png" alt="Diagram" width="600">
 
 
 
@@ -27,7 +27,7 @@ I found the additional constraints large influence the results of IDM-based simu
 * The stop-and-go wave does propagate upstream
 * The decelerating process is too sharp
   
-<img src="Figure_2.png" alt="Diagram" width="500">
+<img src="Figure_2.png" alt="Diagram" width="600">
 
 
 
@@ -35,7 +35,7 @@ I found the additional constraints large influence the results of IDM-based simu
 **Experiment 3:** Original IDM: Only Constraint 2 not taking effect. We observe:
 * Collision occurs
 
-<img src="Figure_3.png" alt="Diagram" width="500">
+<img src="Figure_3.png" alt="Diagram" width="600">
 
 
 
