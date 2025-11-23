@@ -24,7 +24,7 @@ I am particularly surprised that few studies actually report these, even though 
 
 ## Issues (Possible)
 
-**Experiment 1 (Original IDM):** No constraints taking effect. We observe:
+**Experiment 1 (Original IDM):** No constraints taking effect. I observe:
 * The stop-and-go wave does not continously propagate upstream
 * After escaping the stop-and-go wave, the vehicle’s speed cannot return to high speed
 
@@ -33,7 +33,7 @@ I am particularly surprised that few studies actually report these, even though 
 
 
 
-**Experiment 2:** All constraints taking effect. We observe:
+**Experiment 2:** All constraints taking effect. I observe:
 * The stop-and-go wave does continously propagate upstream
 * The decelerating process is too sharp
   
@@ -42,7 +42,7 @@ I am particularly surprised that few studies actually report these, even though 
 
 
 
-**Experiment 3:** Only Constraint 2 not taking effect. We observe:
+**Experiment 3:** Only Constraint 2 not taking effect. I observe:
 * Collision occurs
 
 <img src="Figure_3.png" alt="Diagram" width="600">
