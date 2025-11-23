@@ -10,6 +10,7 @@ I am particularly surprised that few studies actually report these, even though 
 
 
 ## Scenario
+
 * Straight road (open boundary)
 * Entering the road with fixed time interval
 * Simulation time step = 0.1 second
@@ -22,6 +23,9 @@ I am particularly surprised that few studies actually report these, even though 
   ```
 
 
+
+
+
 ## Issues (Possible)
 
 **Experiment 1 (Original IDM):** No constraints taking effect. I observe:
@@ -31,15 +35,11 @@ I am particularly surprised that few studies actually report these, even though 
 <img src="Figure_1.png" alt="Diagram" width="600">
 
 
-
-
 **Experiment 2:** All constraints taking effect. I observe:
 * The stop-and-go wave does continously propagate upstream
-* The decelerating process is too sharp
+* The decelerating process is too sharp -- Here, it is the sharp deceleration, but it is still unknown for other scenarios. The extremely unfortnate case is: It would be significantly affect the results, if it happens in some critical moments.
   
 <img src="Figure_2.png" alt="Diagram" width="600">
-
-
 
 
 **Experiment 3:** Only Constraint 2 not taking effect. I observe:
