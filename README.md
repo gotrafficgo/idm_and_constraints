@@ -5,6 +5,7 @@ I found the additional constraints large influence the results of IDM-based simu
 
 **Note 1:** The well-known **Intelligent Driver Model (IDM)** proposed by Martin Treiber et al (https://arxiv.org/abs/cond-mat/0002177). 
 **Note 2:** I’m fairly confident that there are no errors in the code. If you found one, please kindly reach out to me (he.zb@hotmail.com), which will be very helpful!
+I am particularly surprised that few studies actually report these, even though the IDM is now widely used in academia and industry (e.g., SUMO).
 
 
 
@@ -17,6 +18,8 @@ I found the additional constraints large influence the results of IDM-based simu
     def _generate_boundary_for_first_vehicle(self, current_time):
         ...   
   ```
+
+
 
 ## Issues (Possible)
 
@@ -108,3 +111,15 @@ if self.with_additional_constraint_5 is True:
     d = max(d, 0)
 # -------------------------------
 ```
+
+
+## Citation
+If you find this work useful, please consider citing the project
+
+```bibtex
+@article{ZhengbingHe2025,
+  title={Intelligent Driver Model and its Constrants in Coding},
+  author={He, Zhengbing},
+  journal={https://github.com/gotrafficgo/idm_and_constraints},
+  year={2025}
+}
