@@ -5,9 +5,9 @@ class Config:
     def __init__(self, seed=1):
 
         # === Addition constraint ===
-        whichFigure = 1
+        whichExperiment = 1
 
-        if whichFigure == 1:
+        if whichExperiment == 1:
             ### Fig1 = Original IDM
             self.with_additional_constraint_1 = False
             self.with_additional_constraint_2 = False
@@ -15,7 +15,7 @@ class Config:
             self.with_additional_constraint_4 = False            
             self.with_additional_constraint_5 = False  
         
-        elif whichFigure == 2:
+        elif whichExperiment == 2:
             ### Fig2            
             self.with_additional_constraint_1 = True
             self.with_additional_constraint_2 = True
@@ -23,7 +23,7 @@ class Config:
             self.with_additional_constraint_4 = True             
             self.with_additional_constraint_5 = True  
         
-        elif whichFigure == 3:
+        elif whichExperiment == 3:
             ### Fig3
             self.with_additional_constraint_1 = True
             self.with_additional_constraint_2 = False
