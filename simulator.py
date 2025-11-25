@@ -7,14 +7,6 @@ class Simulator:
     def __init__(self, config: Config):
         self.config = config
         self.vehicles = []
-        self.history = {
-            'time': [],
-            'speed': [],
-            'position': [],
-            'acceleration': [],
-            'moving_distance': []
-        }
-
 
     def run(self):
         number_of_vehicles = 0
