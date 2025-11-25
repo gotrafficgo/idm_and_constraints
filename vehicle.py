@@ -29,7 +29,6 @@ class Vehicle:
         self.L          = config.vehicle_length
         self.delta_t    = config.simulation_time_step
         self.a          = config.initial_acceleration
-        self.d          = 0 # moving distance in current step
 
         # noise in driving
         self.relative_speed_noise = config.relative_speed_noise
@@ -130,10 +129,8 @@ class Vehicle:
         if self.with_additional_constraint_5 is True:
             d = max(d, 0)
         # -------------------------------
-
-        self.d = d
         
-        self.position = self.position + self.d
+        self.position = self.position + d
 
 
     
@@ -142,8 +139,7 @@ class Vehicle:
             "t": t,
             "position": self.position,
             "speed": self.speed,
-            "acceleration": self.a,
-            "moving_distance": self.d
+            "acceleration": self.a
         })
 
 
