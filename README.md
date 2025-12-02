@@ -1,7 +1,6 @@
 
 # Intelligent Driver Model and its Constraints in Coding
 
-## Abstract
 **Background**: When the simulated traffic behaves unexpectedly, adding extra constraints is the most direct and straightforward solution (e.g., enforcing speed>0, moving distance>0).
 
 **Model focused**: Intelligent Driver Model (IDM) proposed by [Martin Treiber et al](https://arxiv.org/abs/cond-mat/0002177)
