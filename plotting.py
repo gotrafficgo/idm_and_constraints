@@ -44,3 +44,42 @@ def plot_time_space_diagram(sim, config):
     ax.grid(True, linestyle='--', alpha=0.4)
     plt.tight_layout()
     plt.show()
+
+
+def plot_speed_time_series(sim, vehicle_ids=[0,1,2,3,4], config=None):
+    fig, ax = plt.subplots(figsize=(9, 6))
+    
+    colors = plt.cm.get_cmap('tab10', len(vehicle_ids))
+    
+    max_times = []  
+    for idx, vid in enumerate(vehicle_ids):
+        vehicle = next((v for v in sim.vehicles if v.id == vid), None)
+        if vehicle is None or not hasattr(vehicle, 'history') or len(vehicle.history) == 0:
+            continue
+        
+        times = np.array([rec['t'] for rec in vehicle.history], dtype=float)
+        speeds = np.array([rec['speed'] for rec in vehicle.history], dtype=float)
+        
+        ax.plot(times, speeds, color=colors(idx), label=f'Vehicle {vid}', linewidth=1.5)
+        
+        max_times.append(times[-1])  
+
+    ax.set_xlabel('Time (s)')
+    ax.set_ylabel('Speed (m/s)')
+    
+    if config and hasattr(config, 'speed_limit'):
+        ax.set_ylim(0, config.speed_limit*1.05)
+    else:
+        max_speed = max([max([rec['speed'] for rec in v.history]) 
+                         for v in sim.vehicles if hasattr(v, 'history') and len(v.history)>0] + [1])
+        ax.set_ylim(0, max_speed*1.05)
+    
+    if len(max_times) > 0:
+        ax.set_xlim(0, max(max_times))
+    elif config and hasattr(config, 'time_max'):
+        ax.set_xlim(0, config.time_max)
+    
+    ax.grid(True, linestyle='--', alpha=0.4)
+    ax.legend()
+    plt.tight_layout()
+    plt.show()
