@@ -34,6 +34,7 @@ PROVE ME WRONG, please.
 **Experiment 1 (Original IDM):** No constraints taking effect. I observe:
 * The stop-and-go wave does not continously propagate upstream
 * After escaping the stop-and-go wave, the vehicle’s speed cannot return to high speed
+* Wave speed = -16 km/h
 
 <img src="Figure_1.png" alt="Diagram" width="600">
 
@@ -41,12 +42,14 @@ PROVE ME WRONG, please.
 **Experiment 2:** All constraints taking effect. I observe:
 * The stop-and-go wave does continously propagate upstream
 * The decelerating process is too sharp -- Here, it is the sharp deceleration, but it is still unknown for other scenarios. The extremely unfortnate case is: It would be significantly affect the results, if it happens in some critical moments.
+* * Wave speed = -10 km/h
   
 <img src="Figure_2.png" alt="Diagram" width="600">
 
 
 **Experiment 3:** Only Constraint 2 not taking effect. I observe:
 * Collision occurs
+* * Wave speed = -9 km/h
 
 <img src="Figure_3.png" alt="Diagram" width="600">
 
