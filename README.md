@@ -10,7 +10,7 @@ Conclusion: I found that
 
 * The original IDM seems to have some drawbacks (Experiment 1).
 * Extra constraints largely influence the results of original IDM-based traffic flow simulation (Experiments 2 and 3).
-* The IDM Plus seems more reasonable (Experiment 4).
+* The IDM Plus seems more reasonable (Experiment 4) ✅.
 
 
 Note 1: I don’t think directly implementing the model with arbitrary constraints in coding is a rigorous attitude.
@@ -54,13 +54,13 @@ I am particularly surprised that few studies actually report these (the conclusi
 
 
 ## IDM 
-* Original IDM
+* Original IDM (Page 254, Traffic Flow Dynamics (2nd Edition))
   
 $$
 a = a^* \left(1 - \left(\frac{v}{v_0}\right)^4 - \left(\frac{s^*(v,\Delta v)}{s}\right)^2 \right)
 $$
 
-* IDM Plus ✅
+* IDM Plus ✅ (Page 265, Traffic Flow Dynamics (2nd Edition))
 
 $$
 a = \min\Biggl[ a^* \Bigl( 1 - \Bigl( \frac{v}{v_0} \Bigr)^4 \Bigr), \ a^* \Bigl( 1 - \frac{s^*(v, \Delta v)}{s} \Bigr)^2 \Biggr]
