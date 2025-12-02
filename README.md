@@ -53,7 +53,7 @@ I am particularly surprised that few studies actually report these (the conclusi
 
 ## IDM 
 * **Original IDM** (_Page 254, Traffic Flow Dynamics (2nd Edition)_). **Obvious issue in the equation**: (s*(v, Δv) / s)^2 > 0, so if v = v0, we will have a = a* (- positive) < 0, i.e., negative acceleration.
-It means that if the subject vehicle has reached the desired speed (v0), its acceleration will be negative (In real world, it should be zeor, isn't it).
+It means that if the subject vehicle has reached the desired speed (v0), its acceleration will be negative (_In real world, the acceleration should be zero, isn't it_).
   
 $$
 a = a^* \left(1 - \left(\frac{v}{v_0}\right)^4 - \left(\frac{s^*(v,\Delta v)}{s}\right)^2 \right)
