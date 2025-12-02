@@ -33,7 +33,7 @@ I am particularly surprised that few studies actually report these (the conclusi
 **Experiment 2:** All constraints taking effect. I observe:
 * The stop-and-go wave continuously propagates upstream
 * The decelerating process is too sharp -- Here, it is the sharp deceleration, but it is still unknown for other scenarios. The extremely unfortunate case is: It would significantly affect the results if it happened in some critical moments.
-* * Wave speed = -10 km/h
+* Wave speed = -10 km/h
 
 <img src="Exp_2.png" alt="Diagram" width="800">
 
@@ -41,14 +41,14 @@ I am particularly surprised that few studies actually report these (the conclusi
 
 **Experiment 3:** Only Constraint 2 not taking effect. I observe:
 * Collision occurs
-* * Wave speed = -9 km/h
+* Wave speed = -9 km/h
 
 <img src="Exp_3.png" alt="Diagram" width="800">
 
 
 **Experiment 4 (IDM Plus):** No extra constraints. ✅ I observe: 
 * This seems to be very reasonable.
-* * Wave speed = -16 km/h
+* Wave speed = -16 km/h
 
 <img src="Exp_4.png" alt="Diagram" width="800">
 
