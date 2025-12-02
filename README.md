@@ -1,13 +1,15 @@
 # Intelligent Driver Model and its Constrants in Coding
 
 ## Abstract
-I found the additional constraints largely influence the results of IDM-based traffic flow simulation. I report some of them here. _I don’t think directly implementing the model with arbitrary constraints in coding is a rigorous attitude._
+When the simulated traffic behaves unexpectedly, adding extra constraints is the most direct and straightforward solution (e.g., speed>0, moving distance>0).
+But, I found the extra constraints largely influence the results of IDM-based traffic flow simulation. I report some of them here. 
+_I don’t think directly implementing the model with arbitrary constraints in coding is a rigorous attitude._
 
 Note 1: The well-known Intelligent Driver Model (IDM) proposed by [Martin Treiber et al](https://arxiv.org/abs/cond-mat/0002177). 
 
 Note 2: I’m fairly confident that there are no errors in the code. 
 If you found errors or knew someone has improved the model, please kindly reach out to me (he.zb@hotmail.com), which will be very helpful!
-I am particularly surprised that few studies actually report these, even though the IDM is now widely used in academia ([a review](https://arxiv.org/abs/2506.05909)) and industry (e.g., SUMO).
+I am particularly surprised that few studies actually report these (the conclusion was made according to my communication with some friends who are very familiar with the IDM), even though the IDM is now widely used in academia ([a review](https://arxiv.org/abs/2506.05909)) and industry (e.g., SUMO).
 PROVE ME WRONG, please.
 
 
@@ -31,12 +33,11 @@ PROVE ME WRONG, please.
 
 ## Issues (Possible)
 
-**Experiment 1 (Original IDM):** No constraints taking effect. I observe:
-* The stop-and-go wave does not continously propagate upstream
+**Experiment 1 (Original IDM):** No extra constraints. I observe:
 * After escaping the stop-and-go wave, the vehicle’s speed cannot return to high speed
 * Wave speed = -16 km/h
 
-<img src="Figure_1.png" alt="Diagram" width="600">
+<img src="Exp_1.png" alt="Diagram" width="800">
 
 
 **Experiment 2:** All constraints taking effect. I observe:
@@ -44,14 +45,21 @@ PROVE ME WRONG, please.
 * The decelerating process is too sharp -- Here, it is the sharp deceleration, but it is still unknown for other scenarios. The extremely unfortnate case is: It would be significantly affect the results, if it happens in some critical moments.
 * * Wave speed = -10 km/h
   
-<img src="Figure_2.png" alt="Diagram" width="600">
+<img src="Exp_2.png" alt="Diagram" width="800">
 
 
 **Experiment 3:** Only Constraint 2 not taking effect. I observe:
 * Collision occurs
 * * Wave speed = -9 km/h
 
-<img src="Figure_3.png" alt="Diagram" width="600">
+<img src="Exp_3.png" alt="Diagram" width="800">
+
+
+**Experiment 4 (IDM Plus):** No extra constraints. I observe: 
+* This seems to be very reasonable”
+* * Wave speed = -16 km/h
+
+<img src="Exp_4.png" alt="Diagram" width="800">
 
 
 
