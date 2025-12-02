@@ -19,7 +19,7 @@ class Simulator:
             t = 1 + i * dt
 
             if abs(t % 100) < 1e-6: 
-                print(f"i:{i}, t:{int(t)}")     
+                print(f"step:{i}, time:{int(t)}")     
 
             # Vehicle Generation
             number_of_vehicles, time_generation_last, self.vehicles = self._generate_vehicles(number_of_vehicles, t, time_generation_last, self.vehicles)
@@ -43,7 +43,10 @@ class Simulator:
 
     def _update_all_acceleration(self, t):
         for vehicle in self.vehicles:
-            vehicle.update_acceleration(t)
+            if self.config.which_IDM == "Plus":
+                vehicle.update_acceleration_plus(t)
+            elif self.config.which_IDM == "Original":
+                vehicle.update_acceleration(t)
 
 
     def _update_all_speed(self):
@@ -84,6 +87,7 @@ class Simulator:
             # Create vehicle
             number_of_vehicles += 1
             v = Vehicle(self.config, number_of_vehicles, v_front)
+
             vehicles.append(v)
             last_generation_time = self.next_generation_time
             v_front = vehicles[-1]

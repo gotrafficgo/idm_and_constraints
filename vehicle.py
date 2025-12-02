@@ -21,21 +21,58 @@ class Vehicle:
         self.history = []
 
         # IDM Parameters
-        self.v0         = self.speed
+        self.v0         = self.speed_limit
         self.s0         = config.idm_minimum_spacing
         self.T          = config.idm_safety_time_headway
         self.a_max      = config.idm_acceleration
         self.b_desired  = config.idm_desired_deceleration
         self.L          = config.vehicle_length
         self.delta_t    = config.simulation_time_step
-        self.a          = config.initial_acceleration
+        self.acceleration          = config.initial_acceleration
 
         # noise in driving
         self.relative_speed_noise = config.relative_speed_noise
 
 
+
+
+    ##### Update-1
+    def update_acceleration_plus(self, current_time):
+
+        ### Initalization
+        if self.vehicle_front is None:
+            v_front_speed, v_front_position = self._generate_boundary_for_first_vehicle(current_time)
+        else:
+            v_front_speed = self.vehicle_front.speed
+            v_front_position = self.vehicle_front.position
+
+        v         = self.speed
+        v_delta   = v - v_front_speed
+        v_delta_perceived   = self._perceptive_relative_speed(v_delta)
+        s         = v_front_position - self.position - self.L                
+        s0        = self.s0
+        a_max     = self.a_max
+        b_desired = self.b_desired
+
+        ### s_star
+        term_s_star_1 = self.T * v
+        term_s_star_2 = v * v_delta_perceived / (2 * (a_max * b_desired) ** 0.5)
+        s_star = s0 + max(0, term_s_star_1 + term_s_star_2)
+
+        ### acceleration update
+        term_a_1 = a_max*(1-(v/self.v0)**4) # positive number
+        term_a_2 = a_max*(1-(s_star/s)** 2)  # positive number   
+        
+        a = min(term_a_1, term_a_2)
+
+        ###
+        self.acceleration = a
+
+
+
     ##### Update-1
     def update_acceleration(self, current_time):
+
         ### Initalization
         if self.vehicle_front is None:
             v_front_speed, v_front_position = self._generate_boundary_for_first_vehicle(current_time)
@@ -58,14 +95,15 @@ class Vehicle:
         # -------------------------------
 
         ### s_star
-        term1 = self.T * v
-        term2 = v * v_delta_perceived / (2 * (a_max * b_desired) ** 0.5)
-        s_star = s0 + max(0, term1 + term2)
+        term_s_star_1 = self.T * v
+        term_s_star_2 = v * v_delta_perceived / (2 * (a_max * b_desired) ** 0.5)
+        s_star = s0 + max(0, term_s_star_1 + term_s_star_2)
 
         ### acceleration update
-        term1 = (v/self.v0) ** 4 # positive number
-        term2 = (s_star/s) ** 2  # positive number   
-        a = a_max * (1 - term1 - term2)    
+        term_a_1 = (v/self.v0) ** 4 # positive number
+        term_a_2 = (s_star/s) ** 2  # positive number   
+        
+        a = a_max * (1 - term_a_1 - term_a_2)    
 
         # -------------------------------        
         ### Additional Constraint 1
@@ -77,7 +115,7 @@ class Vehicle:
         # -------------------------------        
 
         ###
-        self.a = a
+        self.acceleration = a
         
 
 
@@ -87,7 +125,7 @@ class Vehicle:
             v_new = 30  
 
         else:
-            a = self.a
+            a = self.acceleration
             delta_t = self.delta_t
             v = self.speed
 
@@ -117,7 +155,7 @@ class Vehicle:
     ##### Update-3
     def update_position(self):
         ### Initalization
-        a = self.a
+        a = self.acceleration
         v = self.speed
         delta_t = self.delta_t
         
@@ -135,12 +173,13 @@ class Vehicle:
 
     
     def record_state(self, t):
-        self.history.append({
-            "t": t,
-            "position": self.position,
-            "speed": self.speed,
-            "acceleration": self.a
-        })
+        if self.position <= self.road_length:
+            self.history.append({
+                "t": t,
+                "position": self.position,
+                "speed": self.speed,
+                "acceleration": self.acceleration
+            })
 
 
 

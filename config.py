@@ -2,35 +2,43 @@ import random
 import numpy as np
 
 class Config:
-    def __init__(self, seed=1):
-
-        # === Addition constraint ===
-        whichExperiment = 1
-
-        if whichExperiment == 1:
-            ### Fig1 = Original IDM
+    def __init__(self, which_experiment, seed=1):
+        
+        if which_experiment == 1:
+            ### Fig1 = Original IDM (Page 254, Traffic Flow Dynamics (2nd Edition))
+            self.which_IDM = "Original"            
             self.with_additional_constraint_1 = False
             self.with_additional_constraint_2 = False
             self.with_additional_constraint_3 = False
             self.with_additional_constraint_4 = False            
             self.with_additional_constraint_5 = False  
         
-        elif whichExperiment == 2:
+        elif which_experiment == 2:
             ### Fig2            
+            self.which_IDM = "Original"
             self.with_additional_constraint_1 = True
             self.with_additional_constraint_2 = True
             self.with_additional_constraint_3 = True
             self.with_additional_constraint_4 = True             
             self.with_additional_constraint_5 = True  
         
-        elif whichExperiment == 3:
+        elif which_experiment == 3:
             ### Fig3
+            self.which_IDM = "Original"
             self.with_additional_constraint_1 = True
             self.with_additional_constraint_2 = False
             self.with_additional_constraint_3 = True
             self.with_additional_constraint_4 = True             
             self.with_additional_constraint_5 = True        
 
+        elif which_experiment == 4:
+            ### Fig4 = Original IDM Plus (Page 265, Traffic Flow Dynamics (2nd Edition))
+            self.which_IDM = "Plus"            
+            self.with_additional_constraint_1 = False
+            self.with_additional_constraint_2 = False
+            self.with_additional_constraint_3 = False
+            self.with_additional_constraint_4 = False            
+            self.with_additional_constraint_5 = False  
 
 
         # === Inflow ===
