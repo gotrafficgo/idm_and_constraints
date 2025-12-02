@@ -61,6 +61,10 @@ $$
 
 * IDM Plus
 
+$$
+a = a_0 \left(1 - \left(\frac{v}{v_0}\right)^4 - \left(\frac{s^*(v,\Delta v)}{s}\right)^2 \right)
+$$
+
 
 ## Constraints
 Constraint 1: in _vehicle.update_acceleration()_
