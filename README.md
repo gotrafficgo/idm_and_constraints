@@ -10,7 +10,7 @@
 
 * The original IDM seems to have some drawbacks (Experiment 1).
 * Extra constraints largely influence the results of original IDM-based traffic flow simulation (Experiments 2 and 3).
-* The IDM Plus seems more reasonable (Experiment 4) ✅.
+* The IDM Plus ✅ seems more reasonable (Experiment 4).
 
 
 Note 1: I don’t think directly implementing the model with arbitrary constraints in coding is a rigorous attitude.
