@@ -2,24 +2,28 @@
 # Intelligent Driver Model and its Constraints in Coding
 
 ## Abstract
-When the simulated traffic behaves unexpectedly, adding extra constraints is the most direct and straightforward solution (e.g., speed>0, moving distance>0).
-But I found that the extra constraints largely influence the results of IDM-based traffic flow simulation. I report some of them here. 
-_I don’t think directly implementing the model with arbitrary constraints in coding is a rigorous attitude._
+Background: When the simulated traffic behaves unexpectedly, adding extra constraints is the most direct and straightforward solution (e.g., enforcing speed>0, moving distance>0).
+
+Model focused: Intelligent Driver Model (IDM) proposed by [Martin Treiber et al](https://arxiv.org/abs/cond-mat/0002177)
+
+Conclusion: I found that 
+
+* The original IDM seems to have some drawbacks (Experiment 1).
+* Extra constraints largely influence the results of original IDM-based traffic flow simulation (Experiments 2 and 3).
+* The IDM Plus seems more reasonable (Experiment 4).
 
 
-Note 1: The well-known Intelligent Driver Model (IDM) proposed by [Martin Treiber et al](https://arxiv.org/abs/cond-mat/0002177). 
+Note 1: I don’t think directly implementing the model with arbitrary constraints in coding is a rigorous attitude.
 
 Note 2: I’m fairly confident that there are no errors in the code. 
 If you found errors or knew someone has improved the model, please kindly reach out to me (he.zb@hotmail.com), which will be very helpful!
-I am particularly surprised that few studies actually report these (the conclusion was made according to my communication with some friends who are very familiar with the IDM), even though the IDM is now widely used in academia ([a review](https://arxiv.org/abs/2506.05909)) and industry (e.g., SUMO).
-PROVE ME WRONG, please.
+I am particularly surprised that few studies actually report these (the conclusion was made based on my communication with some friends who are very familiar with the IDM), even though the IDM is now widely used in academia ([a review](https://arxiv.org/abs/2506.05909)) and industry (e.g., SUMO).
 
 
 
 ## Issues (Possible)
 
 **Experiment 1 (Original IDM):** No extra constraints. I observe:
-* The stop-and-go wave does not continuously propagate upstream
 * After escaping the stop-and-go wave, the vehicle’s speed cannot return to high speed
 * Wave speed = -16 km/h
 
@@ -43,12 +47,21 @@ PROVE ME WRONG, please.
 
 
 **Experiment 4 (IDM Plus):** No extra constraints. I observe: 
-* This seems to be very reasonable.”
+* This seems to be very reasonable.
 * * Wave speed = -16 km/h
 
 <img src="Exp_4.png" alt="Diagram" width="800">
 
 
+## IDM
+
+# Original IDM 
+$$
+a = a_0 \left(1 - \left(\frac{v}{v_0}\right)^4 - \left(\frac{s^*(v,\Delta v)}{s}\right)^2 \right)
+$$
+
+
+# IDM Plus
 
 
 ## Constraints
