@@ -47,6 +47,7 @@ I am particularly surprised that few studies actually report these (the conclusi
 **EXPERIMENT 4 (IDM Plus):** No extra constraints. ✅ I observe: 
 * This seems to be very reasonable.
 * Wave speed = -16 km/h
+* But, I still don't quite understand why the stop-and-go wave dissipates by itself.
 
 <img src="Exp_4.png" alt="Diagram" width="800">
 
