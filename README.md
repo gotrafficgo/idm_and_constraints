@@ -55,14 +55,15 @@ I am particularly surprised that few studies actually report these (the conclusi
 
 ## IDM 
 * Original IDM
+* 
 $$
-a = a_0 \left(1 - \left(\frac{v}{v_0}\right)^4 - \left(\frac{s^*(v,\Delta v)}{s}\right)^2 \right)
+a = a_max \left(1 - \left(\frac{v}{v_0}\right)^4 - \left(\frac{s^*(v,\Delta v)}{s}\right)^2 \right)
 $$
 
 * IDM Plus
 
 $$
-a = a_0 \left(1 - \left(\frac{v}{v_0}\right)^4 - \left(\frac{s^*(v,\Delta v)}{s}\right)^2 \right)
+a = a_max \left(1 - \left(\frac{v}{v_0}\right)^4 - \left(\frac{s^*(v,\Delta v)}{s}\right)^2 \right)
 $$
 
 
