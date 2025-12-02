@@ -63,7 +63,7 @@ $$
 * **IDM Plus** ✅ (_Page 265, Traffic Flow Dynamics (2nd Edition)_)
 
 $$
-a = \min\Biggl[ a^* \Bigl( 1 - \Bigl( \frac{v}{v_0} \Bigr)^4 \Bigr), \ a^* \Bigl( 1 - \frac{s^*(v, \Delta v)}{s} \Bigr)^2 \Biggr]
+a = \min\Biggl[ a^* \Bigl( 1 - \Bigl( \frac{v}{v_0} \Bigr)^4 \Bigr), \ a^* \left( 1 - \left(\frac{s^*(v, \Delta v)}{s} \right)^2\right) \Biggr]
 $$
 
 
