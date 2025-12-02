@@ -46,7 +46,7 @@ I am particularly surprised that few studies actually report these (the conclusi
 <img src="Exp_3.png" alt="Diagram" width="800">
 
 
-**Experiment 4 (IDM Plus):** No extra constraints. I observe: 
+**Experiment 4 (IDM Plus):** No extra constraints. ✅ I observe: 
 * This seems to be very reasonable.
 * * Wave speed = -16 km/h
 
@@ -60,7 +60,7 @@ $$
 a = a^* \left(1 - \left(\frac{v}{v_0}\right)^4 - \left(\frac{s^*(v,\Delta v)}{s}\right)^2 \right)
 $$
 
-* IDM Plus
+* IDM Plus ✅
 
 $$
 a = \min\Biggl[ a^* \Bigl( 1 - \Bigl( \frac{v}{v_0} \Bigr)^4 \Bigr), \ a^* \Bigl( 1 - \frac{s^*(v, \Delta v)}{s} \Bigr)^2 \Biggr]
